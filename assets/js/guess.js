@@ -57,7 +57,6 @@ hintBtn.addEventListener("click", () => {
   }
   else if (!noDups.includes(randomNum)) {
     noDups.push(randomNum);
-    console.log(noDups);
     document.getElementsByClassName("letter")[randomNum].innerHTML = `${
       localStorage.getItem("word")[randomNum]
     }`;

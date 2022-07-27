@@ -25,7 +25,6 @@ play.addEventListener("click", () => {
         "player__name",
         document.getElementsByClassName("player__name")[0].value
       );
-      console.log(localStorage.getItem("player__name"));
       play.click();
     }
   }

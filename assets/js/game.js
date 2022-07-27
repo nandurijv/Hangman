@@ -3,8 +3,6 @@
 // getting a random word from an API
 
 async function getWord(difficulty) {
-  console.log("inside getWord");
-
   let url = "https://random-word-api.herokuapp.com/word?length=5";
 
   await fetch(url)
