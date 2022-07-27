@@ -12,7 +12,6 @@ let play = document.getElementsByClassName("play__button")[0];
 
 play.addEventListener("click", () => {
   // set player name if empty
-
   if (document.getElementsByClassName("player__name")[0].value == "") {
     let player = document.getElementsByClassName("player__name")[0].value;
 
@@ -46,8 +45,6 @@ let list = document.getElementsByClassName("lvl");
 
 Array.from(list).forEach((element) => {
   element.addEventListener("click", () => {
-    // to store high score as 0
-    localStorage.setItem("highScore", 0);
     // to store difficulty
     localStorage.setItem("difficulty", element.classList[0]);
     if (element.classList[0] == "easy") {
@@ -60,13 +57,10 @@ Array.from(list).forEach((element) => {
       localStorage.setItem("time", 10);
     }
 
-    document.getElementsByClassName("game__hints")[0].innerHTML +=
+    document.getElementById("hintsleft").innerHTML +=
       localStorage.getItem("hints");
 
       document.getElementById('life-count').innerHTML =localStorage.getItem("lives");
-
-    document.getElementsByClassName("game__highscore")[0].innerHTML +=
-      localStorage.getItem("highScore");
 
     getWord(localStorage.getItem("difficulty"));
     timerFunc();

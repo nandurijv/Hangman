@@ -10,7 +10,7 @@ async function getWord(difficulty) {
   await fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      localStorage.setItem('word',data);
+      localStorage.setItem("word", data);
       if (difficulty == "easy" && data[0].length <= 5) {
         for (var i = 0; i < data[0].length; i++) {
           document.getElementsByClassName(
@@ -45,20 +45,25 @@ function timerFunc() {
 
   let minute_holder = document.getElementsByClassName("minutes")[0];
   let second_holder = document.getElementsByClassName("seconds")[0];
+
   minute_holder.innerHTML = minutes;
   second_holder.innerHTML = seconds;
+
   setInterval(() => {
+    seconds--;
     if (seconds <= 0 && minutes >= 1) {
       minutes--;
       seconds = 59;
+      minute_holder.innerHTML = minutes;
+      second_holder.innerHTML = seconds;
     } else if (minutes == 0 && seconds == 0) {
       // log out of the game.
-      let word = localStorage.getItem('word')[charPos];
+      let word = localStorage.getItem("word")[charPos];
       alert(`Your time is up! The correct word was : ${word}`);
       location.reload();
+    } else {
+      minute_holder.innerHTML = minutes;
+      second_holder.innerHTML = seconds;
     }
-    minute_holder.innerHTML = minutes;
-    second_holder.innerHTML = seconds;
-    seconds--;
   }, 1000);
 }
