@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman CSOC-2022</title>
+    <!-- linking stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 600px)"
+      href="./assets/css/mediaquery.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <center>
+        <p class="head1">A CSOC 2022 Project</p>
+        <p class="head2">
+          A SCIENCE AND TECHNOLOGY COUNCIL OF IIT-BHU INITIATIVE
+        </p>
+      </center>
+    </header>
+
+    <!-- Main Heading -->
+    <div class="home__heading">Hangman</div>
+
+    <!-- Image 1 -->
+    <div class="cartoon1">
+      <img src="./assets/images/Cartoon 1.png" />
+    </div>
+
+    <!-- Image 2 -->
+    <div class="cartoon2">
+      <img src="./assets/images/Cartoon 2.png" />
+    </div>
+
+    <!-- BODY -->
+
+        <!-- home  -->
+        <section id="home" class="flex_style">
+          <!-- welcome message -->
+          <div class="welcome__message">Welcome! Player</div>
+
+          <!-- player name -->
+          <input
+            type="text"
+            class="player__name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <br /><br />
+
+          <!-- play button -->
+          <button class="play__button" type="submit">Play Game</button>
+
+          <div class="button__group">
+            <!-- Github Source -->
+            <button class="play__button">Github Repo</button>
+
+            <!-- Leaderboard -->
+            <button
+              class="play__button"
+              style="background: #ffffff58; cursor: auto"
+            >
+              Leader Board
+            </button>
+          </div>
+        </section>
+
+        <!-- options -->
+        <section id="rules" class="flex_style">
+          <!-- description -->
+          <div class="welcome__message">Choose your difficulty level</div>
+
+          <!-- levels -->
+          <div class="levels">
+            <button class="easy lvl">
+              <div class="title">Easy</div>
+              <div class="right">
+                <div class="desc">Gives you 5 lives and 5 hints</div>
+                <div class="max__word">Max Word Length : 5</div>
+                <div class="Timer">Timer : 15 mins</div>
+              </div>
+            </button>
+
+            <button class="difficult lvl">
+              <div class="title">Difficult</div>
+
+              <div class="right">
+                <div class="desc">Gives you 3 lives and 3 hints</div>
+                <div class="max__word">Max Word Length > 5</div>
+                <div class="Timer">Timer : 10 mins</div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- game -->
+        <section id="game">
+            <div class="game__left">
+              <div class="timer">
+                <span class="minutes"></span>:
+                <span class="seconds"></span>
+              </div>
+              <div class="hangman__image">
+
+              </div>
+            </div>
+
+            <div class="game__right">
+              
+              <div class="game__details">
+                <div class="game__hints">Hints Left : </div>
+                <div class="game__lives">Lives Left : <span id="life-count"></span></div>
+                <div class="game__highscore">High Score : </div>
+              </div>
+
+              <div class="game__word flex_style">
+                
+                <div class="game__head">Your Word</div>
+                <div class="your__word"></div>
+                <input class="input__letter" placeholder="Enter a Letter"><br>
+                <button class="check-letter" value="submit">Submit</button><br>
+                <button class="play__button">Use Hint</button>
+              </div>
+
+            </div>
+        </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="block_group">
+        <div class="block"></div>
+        <div class="block grey"></div>
+        <div class="block grey"></div>
+        <div class="block"></div>
+      </div>
+      <center>
+        <p class="foot1">
+          Designed and Built by <span class="name">Nanduri Jayant Vishnu</span>
+        </p>
+        <p class="foot2">4 Stars 2 Forks</p>
+      </center>
+    </footer>
+
+    <!-- javascript -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/liveGame.js"></script>
+    <script src="./assets/js/game.js"></script>
+    <script src="./assets/js/guess.js"></script>
+  </body>
+</html>

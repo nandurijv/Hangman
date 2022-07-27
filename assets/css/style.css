@@ -1,0 +1,274 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900&family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400&display=swap');
+
+
+/* general styling */
+
+*{
+    padding: 0;
+    margin:0;
+    outline:none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000000;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* color scheme */
+:root{
+    --primary: #ffffff;
+    --primary-variant: #d9d9d9;
+    --disabled: #ffffff58;
+    --color1: #dd329e;
+    --color2: #7E5BF0;
+}
+.disabled{
+
+    background:#ffffff58;
+}
+
+/* HEADER STYLING */
+header{
+    font-family:'Trispace',sans-serif;
+    font-size:18px;
+
+    color:white;
+    padding:2rem;
+}
+
+header .head1{
+    font-weight:200;
+    margin-bottom:0.5rem;
+}
+
+header .head2{
+    font-weight:100;
+    font-size:14px;
+}
+
+.flex_style{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+/* IMAGE STYLING */
+.cartoon1 img{
+    position:absolute;
+    height:75%;
+    left:4rem;
+    top:2rem;
+}
+
+.cartoon2 img{
+    position:absolute;
+    height:75%;
+    right:4rem;
+    top:2rem;
+}
+
+/* BODY STYLING */
+
+.home__heading{
+    /* adding gradient to text */
+    background-color: var(--color1);
+    background: linear-gradient(to right, var(--color1), var(--color2));
+    background-size: 100%;
+    background-clip: text;
+
+    /* compatibility */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    /* font styling */
+    font-family:'Poppins',sans-serif;
+    font-size:4rem;
+    font-weight:800;
+}
+.welcome__message{
+    font-family:'Trispace',sans-serif;
+    font-size:2rem;
+    /* font-weight:800; */
+    margin-top:1.2rem;
+    color:white;
+    text-align:center;
+}
+.player__name{
+
+    padding:1rem;
+    margin-top:2rem;
+    border-radius:2rem;
+    border:none;
+    
+    font-family:'Trispace',sans-serif;
+    font-weight:300;
+    font-size:1.2rem;
+    
+    text-align:center;
+    background:#ffffffdd;
+    width:15em;
+}
+
+.play__button{
+    cursor:pointer;
+
+    margin-top:1rem;
+    margin-bottom:2rem;
+    text-align:center;
+    
+    border:none;
+    border-radius:2rem;
+    
+    font-size:1rem;
+    font-family:'Trispace',sans-serif;
+    font-weight:300;
+    
+    width:12em;
+    padding:1rem;
+    
+    background:#ffffff;
+}
+
+.button__group{
+    display:flex;
+    justify-content:space-between;
+    gap:4rem;
+}
+
+/* Rules */
+#rules{
+    display:none;
+}
+
+.levels{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.easy, .difficult{
+
+    cursor:pointer;
+
+    font-family:'Trispace';
+    font-size:1.2rem;
+    font-weight:200;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border-radius:5rem;
+    background:rgba(56, 56, 56, 0.408);
+
+    margin:2rem;
+    padding:2rem;
+
+    color:white;
+    border:none;
+    width:100%;
+}
+.easy:hover, .difficult:hover{
+    background:rgba(56, 56, 56, 0.7);
+}
+.right{
+    font-weight:400;
+}
+/* game section */
+#game{
+    display:none;
+    color:white;
+    gap:2rem;
+    text-align:center;
+}
+.game__right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+}
+.game__details{
+    display:flex;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+.game__word{
+    display:flex;
+    flex-direction:column;
+}
+.your__word{
+    align-self:center;
+    /* background:#ff0000; */
+    font-size:2rem;
+    margin:2rem;
+    color:white;
+}
+.letter{
+    border-bottom:2px solid white;
+    margin:2rem;
+    width:10px;
+    height:10px;
+}
+.input__letter{
+    padding:0.5rem;
+    font-size:1.2rem;
+    text-align:center;
+    border:none;
+    border-radius: 2rem;
+}
+/* FOOTER STYLING */
+.block_group{
+    display:flex;
+    gap:2rem;
+    width:100%;
+    margin:2rem;
+    margin-left:0;
+    margin-right:0;
+}
+
+.block{
+    height:40px;
+    flex:50%;
+    background-color:#ffffff;
+}
+
+.grey{
+    background-color:rgba(128, 128, 128, 0.673);
+}
+
+
+footer{
+    color:white;
+    padding:2rem;
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+    bottom:0;
+    width:100%;
+}
+
+footer .foot1{
+    font-weight:200;
+    margin-bottom:0.5rem;
+}
+
+footer .name{
+    color:var(--color1);
+}
+footer .foot2{
+    font-weight:100;
+}
+
+

@@ -1,0 +1,17 @@
+.cartoon1{
+    display: none;
+}
+.cartoon2{
+    display: none;
+}
+.block__group, .block{
+    display: none;
+}
+
+.play__button{
+    font-size:0.8rem;
+    width:10em;
+}
+footer{
+    padding:0;
+}
